@@ -293,6 +293,7 @@ public class MelhorModBTD6 : BloonsTD6Mod
                     try
                     {
                         int healthAmount = int.Parse(inputText);
+                        InGame.instance.AddMaxHealth(healthAmount);
                         InGame.instance.AddHealth(healthAmount);
                         ModHelper.Msg<MelhorModBTD6>("Texto digitado (convertido para número): " + healthAmount);
                     }
@@ -333,6 +334,7 @@ public class MelhorModBTD6 : BloonsTD6Mod
                     try
                     {
                         int healthAmount = int.Parse(inputText);
+                        InGame.instance.SetMaxHealth(healthAmount);
                         InGame.instance.SetHealth(healthAmount); // Define a vida do jogador
                         ModHelper.Msg<MelhorModBTD6>("Vida setada para: " + healthAmount);
                     }
